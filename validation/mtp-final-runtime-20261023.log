@@ -1,0 +1,98 @@
+2026-10-23T13:13:47.6982990+08:00 Initial final-image recovery health
+ro.product.device=RMX3125
+ro.bootmode=recovery
+ro.twrp.version=3.7.1_16-0
+sys.boot_completed=
+hwservicemanager.ready=true
+init.svc.recovery=running
+init.svc.adbd=running
+init.svc.mobicore=running
+init.svc.keymaster-4-0=running
+init.svc.gatekeeper-1-0=running
+init.svc.hal_cryptoeng_oppo=running
+init.svc.keystore2=running
+sys.usb.config=mtp,adb
+sys.usb.state=mtp,adb
+sys.usb.ffs.ready=1
+sys.usb.ffs.mtp.ready=1
+ro.build.version.security_patch=2026-06-05
+ro.vendor.build.security_patch=2026-06-05
+twrp.all.users.decrypted=true
+twrp.user.0.decrypt=1
+twrp.decrypt.done=true
+35.99 272.96
+mtp /dev/usb-ffs/mtp functionfs rw,relatime 0 0
+/dev/block/by-name/persist /mnt/vendor/persist ext4 rw,seclabel,relatime,data=ordered 0 0
+/dev/block/sdc51 /cache ext4 rw,seclabel,nosuid,nodev,noatime,discard,noauto_da_alloc,data=ordered 0 0
+/dev/block/sdc15 /metadata ext4 rw,seclabel,nosuid,nodev,noatime,discard,data=ordered 0 0
+/dev/block/dm-13 /data f2fs rw,lazytime,seclabel,nosuid,nodev,noatime,background_gc=on,discard,no_heap,user_xattr,inline_xattr,acl,inline_data,inline_dentry,extent_cache,mode=adaptive,active_logs=6,reserve_root=55436,resuid=0,resgid=1065,noatgc,inlinecrypt,alloc_mode=default,fsync_mode=nobarrier 0 0
+lrwxrwxrwx 1 root root 0 2026-10-23 00:13 /config/usb_gadget/g1/configs/b.1/f1 -> ../../../../usb_gadget/g1/functions/ffs.mtp
+lrwxrwxrwx 1 root root 0 2026-10-23 00:13 /config/usb_gadget/g1/configs/b.1/f2 -> ../../../../usb_gadget/g1/functions/ffs.adb
+musb-hdrc
+
+2026-10-23T13:13:56.1482417+08:00 Stable recovery and USB health
+ro.product.device=RMX3125
+ro.bootmode=recovery
+ro.twrp.version=3.7.1_16-0
+sys.boot_completed=
+hwservicemanager.ready=true
+init.svc.recovery=running
+init.svc.adbd=running
+init.svc.mobicore=running
+init.svc.keymaster-4-0=running
+init.svc.gatekeeper-1-0=running
+init.svc.hal_cryptoeng_oppo=running
+init.svc.keystore2=running
+sys.usb.config=mtp,adb
+sys.usb.state=mtp,adb
+sys.usb.ffs.ready=1
+sys.usb.ffs.mtp.ready=1
+ro.build.version.security_patch=2026-06-05
+ro.vendor.build.security_patch=2026-06-05
+twrp.all.users.decrypted=true
+twrp.user.0.decrypt=1
+twrp.decrypt.done=true
+44.46 339.91
+mtp /dev/usb-ffs/mtp functionfs rw,relatime 0 0
+/dev/block/by-name/persist /mnt/vendor/persist ext4 rw,seclabel,relatime,data=ordered 0 0
+/dev/block/sdc51 /cache ext4 rw,seclabel,nosuid,nodev,noatime,discard,noauto_da_alloc,data=ordered 0 0
+/dev/block/sdc15 /metadata ext4 rw,seclabel,nosuid,nodev,noatime,discard,data=ordered 0 0
+/dev/block/dm-13 /data f2fs rw,lazytime,seclabel,nosuid,nodev,noatime,background_gc=on,discard,no_heap,user_xattr,inline_xattr,acl,inline_data,inline_dentry,extent_cache,mode=adaptive,active_logs=6,reserve_root=55436,resuid=0,resgid=1065,noatgc,inlinecrypt,alloc_mode=default,fsync_mode=nobarrier 0 0
+lrwxrwxrwx 1 root root 0 2026-10-23 00:13 /config/usb_gadget/g1/configs/b.1/f1 -> ../../../../usb_gadget/g1/functions/ffs.mtp
+lrwxrwxrwx 1 root root 0 2026-10-23 00:13 /config/usb_gadget/g1/configs/b.1/f2 -> ../../../../usb_gadget/g1/functions/ffs.adb
+musb-hdrc
+
+2026-10-23T13:13:56.5767843+08:00 Relevant recovery decryption and MTP result
+I:Successfully decrypted metadata encrypted data partition with new block device: '/dev/block/mapper/userdata'
+User 0 Decrypted Successfully!
+User 0 Decrypted Successfully
+I:All found users are decrypted.
+Data successfully decrypted
+I:New storage path after decryption: /data/media/0
+   MTP_Storage_ID: 65537
+Successfully decrypted with default password.
+   MTP_Storage_ID: 65537
+   MTP_Storage_ID: 65538
+   MTP_Storage_ID: 65539
+I:[MTP] Starting MTP
+I:[MTP] created new TwrpMtpServer object
+I:[MTP] mtppipe add storage 65537 '/data/media/0'
+
+2026-10-23T13:13:57.9757025+08:00 Windows phone interfaces
+
+Status       : OK
+Class        : WPD
+FriendlyName : RMX3125
+InstanceId   : [REDACTED_DEVICE_ID]
+
+Status       : OK
+Class        : AndroidUsbDeviceClass
+FriendlyName : Android Composite ADB Interface
+InstanceId   : [REDACTED_DEVICE_ID]
+
+Status       : OK
+Class        : USB
+FriendlyName : USB Composite Device
+InstanceId   : [REDACTED_DEVICE_ID]
+
+

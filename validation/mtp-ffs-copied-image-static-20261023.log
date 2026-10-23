@@ -1,0 +1,6 @@
+PASS: 128 MiB header v2, load addresses, original kernel/DTB/DTBO and AVB footer.
+PASS: every device overlay, stock HAL/TEE payload, HAL alias and touch firmware matches the packaged ramdisk.
+PASS: required ARM64 executables, fscrypt library, policy, UI, HIDL framework manifest and security patch properties.
+PASS: Keystore crash protection is retained; packaged init/shell scripts do not set sys.boot_completed=1.
+SHA256: 7873cdd834dd61b28267680865a0de04f4ace36cfb656aa05dd6b995ebf9b938
+Runtime boot, touch, ADB, partition access and existing-data decryption remain untested.

@@ -1,0 +1,15 @@
+# SPDX-License-Identifier: Apache-2.0
+on post-fs
+    mkdir /mnt/vendor/persist 0771 system system
+    mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
+    mkdir /mnt/vendor/persist/mcRegistry 0771 system system
+    start mobicore
+
+service mobicore /vendor/bin/mcDriverDaemon --P1 /mnt/vendor/persist/mcRegistry \
+    -r /vendor/app/mcRegistry/020f0000000000000000000000000000.drbin \
+    -r /vendor/app/mcRegistry/05120000000000000000000000000000.drbin
+    user root
+    group root
+    disabled
+    setenv LD_LIBRARY_PATH /vendor/lib64
+    seclabel u:r:recovery:s0

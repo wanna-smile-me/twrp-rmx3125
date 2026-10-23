@@ -1,0 +1,4 @@
+firmware_directories /vendor/firmware /odm/firmware
+/dev/mobicore 0600 system system
+/dev/mobicore-user 0660 system system
+/dev/input/* 0660 root input

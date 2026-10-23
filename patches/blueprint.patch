@@ -1,0 +1,42 @@
+diff --git a/context.go b/context.go
+index 1baefda..f0073c5 100644
+--- a/context.go
++++ b/context.go
+@@ -2280,7 +2280,8 @@ type pauseSpec struct {
+ 
+ type unpause chan struct{}
+ 
+-const parallelVisitLimit = 1000
++// Bound in-flight module generation on this memory-constrained build host.
++const parallelVisitLimit = 16
+ 
+ // Calls visit on each module, guaranteeing that visit is not called on a module until visit on all
+ // of its dependencies has finished.  A visit function can write a pauseSpec to the pause channel
+@@ -4181,7 +4182,8 @@ func (c *Context) VerifyProvidersWereUnchanged() []error {
+ 		}
+ 		close(toProcess)
+ 	}()
+-	for i := 0; i < 1000; i++ {
++	// Bound simultaneous hash maps on memory-constrained build hosts.
++	for i := 0; i < min(4, runtime.GOMAXPROCS(0)); i++ {
+ 		wg.Add(1)
+ 		go func() {
+ 			var errors []error
+diff --git a/provider_test.go b/provider_test.go
+index aafe3c3..8df5a46 100644
+--- a/provider_test.go
++++ b/provider_test.go
+@@ -167,6 +167,13 @@ func TestProviders(t *testing.T) {
+ 	if g, w := bModule.mutatorProviderValues, []string{"b", "c", "d", "d"}; !reflect.DeepEqual(g, w) {
+ 		t.Errorf("expected B.mutatorProviderValues %q, got %q", w, g)
+ 	}
++	if errs := ctx.VerifyProvidersWereUnchanged(); len(errs) != 0 {
++		t.Fatalf("unchanged providers failed verification: %v", errs)
++	}
++	bModule.mutatorProviderValues[0] = "modified"
++	if errs := ctx.VerifyProvidersWereUnchanged(); len(errs) == 0 {
++		t.Fatal("modified provider was not detected")
++	}
+ }
+ 
+ type invalidProviderUsageMutatorInfo string

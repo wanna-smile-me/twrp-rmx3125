@@ -1,0 +1,15 @@
+2026-10-23T13:20:16.5562345+08:00
+APPROVED_PHONE_TEMP_FILES_ABSENT
+7873cdd834dd61b28267680865a0de04f4ace36cfb656aa05dd6b995ebf9b938  /dev/block/by-name/recovery
+
+2026-10-23T13:20:17.9318962+08:00 Normal Android reboot requested.
+2026-10-23T13:22:12.1668323+08:00
+NORMAL_ANDROID_BOOT_COMPLETE
+uid=0(root) gid=0(root) groups=0(root) context=u:r:magisk:s0
+normal
+1
+oppo6833
+16
+7873cdd834dd61b28267680865a0de04f4ace36cfb656aa05dd6b995ebf9b938  /dev/block/by-name/recovery
+APPROVED_TEMP_FILES_REMAIN_ABSENT
+

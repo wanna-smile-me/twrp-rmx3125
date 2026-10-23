@@ -1,0 +1,45 @@
+diff --git a/mtp/MtpFfsHandle.cpp b/mtp/MtpFfsHandle.cpp
+index f85c0fe..075f0d2 100644
+--- a/mtp/MtpFfsHandle.cpp
++++ b/mtp/MtpFfsHandle.cpp
+@@ -85,6 +85,17 @@ void MtpFfsHandle::closeEndpoints() {
+ }
+ 
+ bool MtpFfsHandle::openEndpoints(bool ptp) {
++    // Both AIO and compatibility startup need descriptors before the kernel creates ep1/ep2.
++    if (mControl < 0) {
++        mControl.reset(TEMP_FAILURE_RETRY(open(ptp ? FFS_PTP_EP0 : FFS_MTP_EP0, O_RDWR)));
++        if (mControl < 0) {
++            PLOG(ERROR) << (ptp ? FFS_PTP_EP0 : FFS_MTP_EP0) << ": cannot open control ep";
++            return false;
++        }
++    }
++    if (!writeDescriptors(ptp))
++        return false;
++
+     if (mBulkIn < 0) {
+         mBulkIn.reset(TEMP_FAILURE_RETRY(open(ptp ? FFS_PTP_EP_IN : FFS_MTP_EP_IN, O_RDWR)));
+         if (mBulkIn < 0) {
+@@ -266,22 +277,6 @@ int MtpFfsHandle::handleControlRequest(const struct usb_ctrlrequest *setup) {
+ }
+ 
+ int MtpFfsHandle::start(bool ptp) {
+-    // Reopen ep0 if a previous failed attempt closed it, and write the
+-    // MTP/PTP descriptors before touching the endpoints: the kernel only
+-    // creates the ep1/ep2 files and marks the function active after it
+-    // receives the descriptors, and init only binds ffs.mtp to the UDC
+-    // once sys.usb.ffs.mtp.ready (set by writeDescriptors) is true.
+-    if (mControl < 0) {
+-        mControl.reset(TEMP_FAILURE_RETRY(open(ptp ? FFS_PTP_EP0 : FFS_MTP_EP0, O_RDWR)));
+-        if (mControl < 0) {
+-            PLOG(ERROR) << (ptp ? FFS_PTP_EP0 : FFS_MTP_EP0) << ": cannot open control ep";
+-            return -1;
+-        }
+-    }
+-
+-    if (!writeDescriptors(ptp))
+-        return -1;
+-
+     if (!openEndpoints(ptp))
+         return -1;
+ 

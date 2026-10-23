@@ -1,0 +1,8 @@
+2026-10-23T13:15:30.5823918+08:00 I:[MTP] mtppipe add storage 65537 '/data/media/0'
+2026-10-23T13:15:31.9639249+08:00 MTP target verified: RMX3125, Internal Storage
+2026-10-23T13:15:32.9030538+08:00 PASS: actual MTP host-to-phone transfer, phone SHA256=c8f5d0341d54d951a71b136e6e2afcb14d11ed8489a7ae126a8fee0df6ecf193
+2026-10-23T13:15:33.7530896+08:00 PASS: actual MTP phone-to-host transfer into fresh directory, SHA256=c8f5d0341d54d951a71b136e6e2afcb14d11ed8489a7ae126a8fee0df6ecf193
+2026-10-23T13:15:33.7545177+08:00 ROUNDTRIP_PASS; only the approved fixed-content 4096-byte test file was copied.
+2026-10-23T13:16:51.8484514+08:00
+APPROVED_MTP_TEST_FILE_REMOVED_AND_ABSENCE_CHECKED
+

@@ -1,0 +1,20 @@
+2026-10-23T13:12:51.6154512+08:00 Final-image approval received; live preflight passed
+uid=0(root) gid=0(root) groups=0(root) context=u:r:magisk:s0
+ecc77bc73da1ece78f7bfb5a0d3df623eeab14a9839e298c3a43cb3ad15feed5  /dev/block/by-name/recovery
+
+2026-10-23T13:12:54.7725612+08:00 Approved image push
+/path/to/twrp-rmx3125\artifacts\twrp-16-RMX3125-20261023-mtp.img: 1 file pushed, 0 skipped. 44.8 MB/s (134217728 bytes in 2.855s)
+
+2026-10-23T13:12:55.0838453+08:00 Phone temporary image verified
+7873cdd834dd61b28267680865a0de04f4ace36cfb656aa05dd6b995ebf9b938  /data/local/tmp/twrp-rmx3125-recovery-20261023-mtp.img
+
+2026-10-23T13:12:55.5538571+08:00 Write only approved recovery partition
+32+0 records in
+32+0 records out
+134217728 bytes (128 M) copied, 0.324 s, 395 M/s
+
+2026-10-23T13:12:56.0258885+08:00 PASS: complete recovery partition hash equals approved final image
+7873cdd834dd61b28267680865a0de04f4ace36cfb656aa05dd6b995ebf9b938  /dev/block/by-name/recovery
+
+2026-10-23T13:12:59.5870533+08:00 Authorized recovery reboot requested
+

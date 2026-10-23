@@ -1,0 +1,5 @@
+/data f2fs /dev/block/by-name/userdata flags=fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized;keydirectory=/metadata/vold/metadata_encryption
+/boot emmc /dev/block/by-name/boot flags=backup=1;flashimg=1
+/recovery emmc /dev/block/by-name/recovery flags=backup=1;flashimg=1
+/external_sd auto /dev/block/mmcblk0p1 flags=display="External SD";storage;removable;backup=0
+/usb_otg auto /dev/block/sdd1 flags=display="USB OTG";storage;removable;backup=0

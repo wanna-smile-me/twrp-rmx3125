@@ -1,0 +1,17 @@
+# Android fstab syntax; encryption options match the live RMX3125 vendor fstab.
+system /system ext4 ro wait,avb=vbmeta_system,logical,first_stage_mount
+vendor /vendor ext4 ro wait,avb,logical,first_stage_mount
+product /product ext4 ro wait,avb,logical,first_stage_mount
+odm /odm ext4 ro wait,logical,first_stage_mount
+/dev/block/by-name/metadata /metadata ext4 noatime,nosuid,nodev,discard wait,check,first_stage_mount
+/dev/block/by-name/cache /cache ext4 noatime,nosuid,nodev,noauto_da_alloc,discard wait,check
+/dev/block/by-name/userdata /data f2fs noatime,nosuid,nodev,discard,noflush_merge,fsync_mode=nobarrier,reserve_root=134217,resgid=1065,inlinecrypt wait,check,quota,reservedsize=128m,latemount,checkpoint=fs,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized,keydirectory=/metadata/vold/metadata_encryption,fsverity
+/dev/block/by-name/boot /boot emmc defaults defaults
+/dev/block/by-name/recovery /recovery emmc defaults defaults
+/dev/block/by-name/dtbo /dtbo emmc defaults defaults
+/dev/block/by-name/misc /misc emmc defaults defaults
+/dev/block/by-name/vbmeta /vbmeta emmc defaults defaults
+/dev/block/by-name/vbmeta_system /vbmeta_system emmc defaults defaults
+/dev/block/by-name/vbmeta_vendor /vbmeta_vendor emmc defaults defaults
+/dev/block/mmcblk0p1 /external_sd auto nosuid,nodev defaults
+/dev/block/sdd1 /usb_otg auto nosuid,nodev defaults

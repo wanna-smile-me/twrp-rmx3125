@@ -1,0 +1,33 @@
+2026-10-23T13:17:41.2684098+08:00
+PASS_MTP_OFF_ADB_ALIVE_F2_REMOVED
+269.85 2125.78
+
+running
+
+2026-10-23T13:18:40.6017929+08:00
+PASS_MTP_REENABLED_WITH_ADB_AND_EXISTING_DATA
+329.21 2586.42
+init.svc.recovery=running
+init.svc.mobicore=running
+init.svc.keymaster-4-0=running
+init.svc.gatekeeper-1-0=running
+init.svc.hal_cryptoeng_oppo=running
+init.svc.keystore2=running
+
+
+Status       : OK
+Class        : WPD
+FriendlyName : RMX3125
+InstanceId   : [REDACTED_DEVICE_ID]
+
+Status       : OK
+Class        : AndroidUsbDeviceClass
+FriendlyName : Android Composite ADB Interface
+InstanceId   : [REDACTED_DEVICE_ID]
+
+Status       : OK
+Class        : USB
+FriendlyName : USB Composite Device
+InstanceId   : [REDACTED_DEVICE_ID]
+
+

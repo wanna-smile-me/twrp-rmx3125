@@ -1,0 +1,30 @@
+[
+  {
+    "Repository": "bootable/recovery",
+    "PinnedAndCurrentRevision": "0315dbb53c47a0532546b7056f6af71b4dc0ddab",
+    "Patch": "recovery.patch",
+    "ReverseApplyCheck": "passed",
+    "Files": [
+      "mtp/MtpFfsHandle.cpp"
+    ]
+  },
+  {
+    "Repository": "build/blueprint",
+    "PinnedAndCurrentRevision": "dcb14f2e146f40cf1f212efb220e9aa1f3cfc280",
+    "Patch": "blueprint.patch",
+    "ReverseApplyCheck": "passed",
+    "Files": [
+      "context.go",
+      "provider_test.go"
+    ]
+  },
+  {
+    "Repository": "build/make",
+    "PinnedAndCurrentRevision": "74715e25d7c2ede6ae00db69d08970e3cf81c20c",
+    "Patch": "build-make.patch",
+    "ReverseApplyCheck": "passed",
+    "Files": [
+      "core/soong_config.mk"
+    ]
+  }
+]

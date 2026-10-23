@@ -1,0 +1,3 @@
+Verifying image /opt/validation/twrp-RMX3125-20261023-mtp/copied/recovery.img using key at external/avb/test/data/testkey_rsa2048.pem
+vbmeta: Successfully verified footer and SHA256_RSA2048 vbmeta struct in /opt/validation/twrp-RMX3125-20261023-mtp/copied/recovery.img
+recovery: Successfully verified sha256 hash of /opt/validation/twrp-RMX3125-20261023-mtp/copied/recovery.img for image of 50042880 bytes
