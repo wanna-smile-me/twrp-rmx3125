@@ -4,7 +4,11 @@
 
 ## 下载
 
-从 [Releases](https://github.com/wanna-smile-me/twrp-rmx3125/releases/tag/android16-20261023-mtp) 下载：
+从 [Releases](https://github.com/wanna-smile-me/twrp-rmx3125/releases/tag/android16-20261023-mtp-zip) 下载 **`RMX3125-TWRP-20261023.zip`**（92,190,593 字节，约 87.9 MiB）。Windows 可直接解压；**刷入解压后的 `.img`，不要直接刷 ZIP 包。**
+
+ZIP SHA-256：`b990ba102d6fbd8df2e591ae9d5a6dccbd2e5371b188c9e031f35e305e865034`。
+
+包内有以下三个文件，解压后已分别与原文件比较 SHA-256，全部一致：
 
 | 文件 | 用途 | 大小 |
 | --- | --- | --- |
@@ -24,7 +28,7 @@
 80fb5e3c6fadb0157daf45772f62dda53ca67faa7d5087b917c33643b8b8d590
 ```
 
-下载两个镜像及清单后，在同一目录运行 `sha256sum -c SHA256SUMS.txt`。Windows 也可使用 `Get-FileHash -Algorithm SHA256`。失败的首版和存在 MTP 故障的中间版本没有作为下载成品发布。
+解压后，在同一目录运行 `sha256sum -c SHA256SUMS.txt`。Windows 也可使用 `Get-FileHash -Algorithm SHA256`。失败的首版和存在 MTP 故障的中间版本没有作为下载成品发布。
 
 ## 设备与已测环境
 

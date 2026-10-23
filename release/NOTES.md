@@ -4,7 +4,9 @@ realme V11s / RMX3125 专用非官方 Android 16 构建。本次已在一台匹�
 
 修复了 HIDL 加密服务启动依赖、MTP FunctionFS 配置和兼容模式描述符初始化。
 
-附件：
+下载 **`RMX3125-TWRP-20261023.zip`**，92,190,593 字节（约 87.9 MiB）。ZIP SHA-256：`b990ba102d6fbd8df2e591ae9d5a6dccbd2e5371b188c9e031f35e305e865034`。
+
+**先解压，再使用其中的 `.img`；不要直接把本下载 ZIP 当作 TWRP 安装 ZIP 刷入。** 包内以下三个文件均已解压并逐个比较 SHA-256，与原文件完全一致：
 
 - `twrp-16-RMX3125-20261023-mtp.img`：最终镜像，134217728 字节，SHA-256 `7873cdd834dd61b28267680865a0de04f4ace36cfb656aa05dd6b995ebf9b938`。
 - `stock-recovery-RMX3125.img`：原厂 recovery，134217728 字节，SHA-256 `80fb5e3c6fadb0157daf45772f62dda53ca67faa7d5087b917c33643b8b8d590`。

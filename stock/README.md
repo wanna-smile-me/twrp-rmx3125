@@ -1,6 +1,6 @@
 # 原厂 recovery 基准
 
-原厂 recovery 作为 [Release 附件](https://github.com/wanna-smile-me/twrp-rmx3125/releases/tag/android16-20261023-mtp)提供，文件名为 `stock-recovery-RMX3125.img`，不直接存入 Git 历史。
+原厂 recovery 放在 [Release 的 ZIP 包](https://github.com/wanna-smile-me/twrp-rmx3125/releases/tag/android16-20261023-mtp-zip)中。下载并解压 `RMX3125-TWRP-20261023.zip` 后得到 `stock-recovery-RMX3125.img`；镜像不直接存入 Git 历史。
 
 - 大小：134217728 字节。
 - SHA-256：`80fb5e3c6fadb0157daf45772f62dda53ca67faa7d5087b917c33643b8b8d590`。
